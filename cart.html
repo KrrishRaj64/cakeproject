@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="cakes.html">Cakes</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <div id="total-price"></div>
+    <button onclick="checkout()">Checkout</button>
+
+    <!-- Add the script tags for JavaScript here -->
+    <script src="script.js"></script>
+
+    <!-- Load the cart from localStorage when the page loads -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load cart from localStorage if it exists
+            const savedCart = localStorage.getItem('cart');
+            if (savedCart) {
+                cart = JSON.parse(savedCart); // Parse the saved cart from localStorage
+                updateCart(); // Update the cart display with the saved cart data
+            }
+        });
+    </script>
+</body>
+</html>

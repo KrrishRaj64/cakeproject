@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chocolate Cake Details</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="cakes.html">Cakes</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="cake-details">
+        <img src="cake.jpeg" alt=""Chocolate Cake"scrset =""width="250" class="cake-image">
+        <h3>Chocolate Cake</h3>
+        <p>Description: A rich and decadent chocolate cake made with the finest cocoa. Perfect for birthdays, anniversaries, or just because!</p>
+        
+        <div class="customization-options">
+            <h4>Customization Options:</h4>
+            <label for="size">Size:</label>
+            <select id="size">
+                <option value="small">Small (6 inches)</option>
+                <option value="medium">Medium (8 inches)</option>
+                <option value="large">Large (10 inches)</option>
+            </select>
+            
+            <label for="flavor">Flavor:</label>
+            <select id="flavor">
+                <option value="chocolate">Chocolate</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="red-velvet">Red Velvet</option>
+            </select>
+        </div>
+
+        <p>Price: $20</p>
+        <button onclick="addToCart({name: 'Chocolate Cake', price: 20})">Add to Cart</button>
+    </div>
+
+    <footer>
+        <p>Contact us: info@cakeshop.com</p>
+        <p>Follow us on social media!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
